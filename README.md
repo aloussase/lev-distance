@@ -1,6 +1,9 @@
 This repository contains a sample implementation of the edit distance algorithm in
 Python.
 
+The code in this repository was adapter from the Haskell version on Wikipedia:
+https://en.wikipedia.org/wiki/Levenshtein_distance.
+
 ## Contributing
 
 1. Fork this repo and then submit a PR.
