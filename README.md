@@ -1,25 +1,26 @@
-This repository contains a sample implementation of the edit distance algorithm in
-Python.
+# 🐍 Python Levenshtein Distance Implementation
 
-The code in this repository was adapter from the Haskell version on Wikipedia:
-https://en.wikipedia.org/wiki/Levenshtein_distance.
+This repo contains a Python implementation of the edit distance algorithm. 🧮
 
-## Contributing
+The code was adapted from the Haskell version on Wikipedia[^wiki].
 
-1. Fork this repo and then submit a PR.
+## 🛠️ Contributing
 
-2. Create a virtual environment
-```
-# Assumes bash
+1. 🍴 Fork this repo
+2. 🐍 Set up your environment:
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
-
-3. Install dependencies
-```
 pip install -r requirements.txt
 ```
+3. ✍️ Make your changes
+4. 📤 Submit a PR
 
-4. Code your solution
+## 🧪 Running Tests
 
-5. Submit a PR
+To run the test suite:
+```bash
+python3 -m pytest
+```
+
+[^wiki]: [Wikipedia Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
