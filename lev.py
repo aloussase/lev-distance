@@ -12,6 +12,7 @@ Authors:
 
 from functools import lru_cache
 
+
 def levenshtein_distance(str1: str, str2: str) -> int:
     # This is what does the caching
     @lru_cache
@@ -19,17 +20,17 @@ def levenshtein_distance(str1: str, str2: str) -> int:
         # Base cases
         if i == 0: return j
         if j == 0: return i
-            
+
         # If characters are the same, no operation needed
-        if str1[i-1] == str2[j-1]:
-            return lev(i-1, j-1)
-            
+        if str1[i - 1] == str2[j - 1]:
+            return lev(i - 1, j - 1)
+
         return 1 + min(
-            lev(i-1, j),    # deletion from str1
-            lev(i, j-1),    # insertion into str1
-            lev(i-1, j-1)   # substitution in str1 from str2
+            lev(i - 1, j),     # deletion from str1
+            lev(i, j - 1),     # insertion into str1
+            lev(i - 1, j - 1), # substitution in str1 from str2
         )
-    
+
     return lev(len(str1), len(str2))
 
 
