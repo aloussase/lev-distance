@@ -25,3 +25,9 @@ def test_case_sensitivity():
 
     # 'T' -> 't' y 'S' -> 's'
     assert levenshtein_distance("TypeScript", "typescript") == 2
+
+def test_mixed_special_cases():
+    """Test mixed cases with special characters and case sensitivity."""
+    # Mezcla de mayúsculas y caracteres especiales
+    assert levenshtein_distance("Hello, World!", "hello, world!") == 2  # H->h
+    assert levenshtein_distance("Good Morning ☀️", "good morning ☀️") == 2  # G->g
