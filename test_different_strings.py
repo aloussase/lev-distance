@@ -53,3 +53,22 @@ def test_edge_cases():
     assert levenshtein_distance("reconocer", "conocer") == 2
     # Repeated characters
     assert levenshtein_distance("mississippi", "missouri") == 6
+
+def test_transpositions():
+    """Test transposed characters."""
+    assert levenshtein_distance("abcd", "abdc") == 2
+    assert levenshtein_distance("python", "pythno") == 2
+    assert levenshtein_distance("conocer", "cnocer") == 1
+
+def test_combined_operations():
+    """Test strings requiring a combination of insertions, deletions, and substitutions."""
+    assert levenshtein_distance("kitten", "sitting") == 3
+    assert levenshtein_distance("flaw", "lawn") == 2
+    assert levenshtein_distance("intention", "execution") == 5
+
+def test_non_alphabetic_characters():
+    """Test strings with numbers, spaces, and symbols."""
+    assert levenshtein_distance("hello world!", "hello world") == 1
+    assert levenshtein_distance("12345", "123") == 2
+    assert levenshtein_distance("!@#$%", "!@#") == 2
+    assert levenshtein_distance("good_morning", "good morning") == 1

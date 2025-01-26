@@ -19,3 +19,10 @@ def test_equal_strings():
 
     # Cadenas mixtas
     assert levenshtein_distance("Hello, World!", "Hello, World!") == 0
+
+def test_equal_unicode_and_emojis():
+    """Test equal strings with Unicode characters and emojis."""
+    assert levenshtein_distance("😊🚀", "😊🚀") == 0
+    assert levenshtein_distance("mañana", "mañana") == 0
+    assert levenshtein_distance("straße", "straße") == 0
+    assert levenshtein_distance("Good morning ☀️", "Good morning ☀️") == 0
